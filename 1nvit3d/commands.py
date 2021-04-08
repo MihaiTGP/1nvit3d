@@ -1,11 +1,14 @@
 import pygame, sys, os
 pygame.init()
+pygame.font.init()
 
 move_commands = ['up', 'down', 'left', 'right']
 teleport_commands = ['up up', 'down down', 'left left', 'right right']
 
 FONT = pygame.font.Font(os.path.join('Assets', 'Pixeboy.ttf'), 55)
 BIG_FONT = pygame.font.Font(os.path.join('Assets', 'Pixeboy.ttf'), 80)
+
+
 
 SMALL_RECT_WIDTH = 120
 RECT_WIDTH = 220
@@ -17,6 +20,8 @@ BLACK = (0, 0, 0)
 BLUE = (0, 0, 255)
 WIN = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption('Commands')
+
+esc_surface = FONT.render('Press ESC to return to the menu', True, BLACK)
 
 def draw_commands(move, tp):
     title_surface = BIG_FONT.render('Commands', True, BLACK)
@@ -132,7 +137,12 @@ def commands():
 
 
         draw_commands(move_commands, teleport_commands)
+        WIN.blit(esc_surface, (30, 700))
         CLOCK.tick(60)
+        pygame.display.update()
+
+if __name__ == "__main__":
+    commands()
         pygame.display.update()
 
 if __name__ == "__main__":
