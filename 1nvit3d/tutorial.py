@@ -1,11 +1,13 @@
 import pygame, sys, os
 pygame.init()
+pygame.font.init()
 
 WIDTH = 800
 HEIGHT = 800
 
 BLACK = (0, 0, 0)
 
+LITTLE_FONT = pygame.font.Font(os.path.join('Assets', 'Pixeboy.ttf'), 40)
 FONT = pygame.font.Font(os.path.join('Assets', 'Pixeboy.ttf'), 80)
 WIN = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption('Tutorial')
@@ -18,6 +20,7 @@ tut1 = pygame.image.load(os.path.join('Assets', 'Tutorial1.PNG'))
 tut2 = pygame.image.load(os.path.join('Assets', 'Tutorial2.PNG'))
 tut3 = pygame.image.load(os.path.join('Assets', 'Tutorial3.PNG'))
 
+esc_surface = LITTLE_FONT.render('Press ESC to return to the menu', True, BLACK)
 
 def tutorial():
     running = True
@@ -38,6 +41,7 @@ def tutorial():
         WIN.blit(tut2, (10, 300))
         WIN.blit(text3, (10, 540))
         WIN.blit(tut3, (10, 600))
+        WIN.blit(esc_surface, (10, 750))
         pygame.display.update()
 
 if __name__ == '__main__':
