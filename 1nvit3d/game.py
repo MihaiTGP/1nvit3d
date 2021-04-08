@@ -50,7 +50,7 @@ class World():
     def render_terrain(self):
         x = 100
         y = 50
-        TILE_IMG = pygame.image.load(os.path.join('Assets', 'Tile.png'))
+        TILE_IMG = pygame.image.load(os.path.join('Assets', 'Tile.PNG'))
         row_count = 0
         for row in self.data:
             col_count = 0
@@ -105,7 +105,7 @@ class World():
                     self.tile_list.append(tile)
 
                 if tile == 8:
-                    img = pygame.transform.scale(pygame.image.load(os.path.join('Assets', 'Coin.png')), (30, 30))
+                    img = pygame.transform.scale(pygame.image.load(os.path.join('Assets', 'Coin.PNG')), (30, 30))
                     img_rect = img.get_rect()
                     img_rect.x = x + col_count * TILE_SIZE
                     img_rect.y = y + row_count * TILE_SIZE
