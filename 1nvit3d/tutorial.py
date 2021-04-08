@@ -14,9 +14,9 @@ text1 = FONT.render('Story', True, BLACK)
 text2 = FONT.render('Objective', True, BLACK)
 text3 = FONT.render('How to play?', True, BLACK)
 
-tut1 = pygame.image.load(os.path.join('Assets', 'Tutorial1.png'))
-tut2 = pygame.image.load(os.path.join('Assets', 'Tutorial2.png'))
-tut3 = pygame.image.load(os.path.join('Assets', 'Tutorial3.png'))
+tut1 = pygame.image.load(os.path.join('Assets', 'Tutorial1.PNG'))
+tut2 = pygame.image.load(os.path.join('Assets', 'Tutorial2.PNG'))
+tut3 = pygame.image.load(os.path.join('Assets', 'Tutorial3.PNG'))
 
 
 def tutorial():
