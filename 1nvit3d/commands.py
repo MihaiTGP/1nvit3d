@@ -43,14 +43,14 @@ def draw_command(command):
     title_surface = BIG_FONT.render(command, True, BLACK)
 
 
-    definitions = {'up': pygame.image.load(os.path.join('Assets', 'Def1.png')),
-                   'down'  :pygame.image.load(os.path.join('Assets', 'Def2.png')),
-                   'left': pygame.image.load(os.path.join('Assets', 'Def3.png')),
-                   'right': pygame.image.load(os.path.join('Assets', 'Def4.png')),
-                   'up up':pygame.image.load(os.path.join('Assets', 'Def5.png')),
-                   'down down': pygame.image.load(os.path.join('Assets', 'Def6.png')),
-                   'left left': pygame.image.load(os.path.join('Assets', 'Def7.png')),
-                   'right right':pygame.image.load(os.path.join('Assets', 'Def8.png'))}
+    definitions = {'up': pygame.image.load(os.path.join('Assets', 'Def1.PNG')),
+                   'down'  :pygame.image.load(os.path.join('Assets', 'Def2.PNG')),
+                   'left': pygame.image.load(os.path.join('Assets', 'Def3.PNG')),
+                   'right': pygame.image.load(os.path.join('Assets', 'Def4.PNG')),
+                   'up up':pygame.image.load(os.path.join('Assets', 'Def5.PNG')),
+                   'down down': pygame.image.load(os.path.join('Assets', 'Def6.PNG')),
+                   'left left': pygame.image.load(os.path.join('Assets', 'Def7.PNG')),
+                   'right right':pygame.image.load(os.path.join('Assets', 'Def8.PNG'))}
 
     definition = definitions[command]
     looking = True
